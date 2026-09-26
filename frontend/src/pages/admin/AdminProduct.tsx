@@ -33,21 +33,25 @@ const AdminProducts = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors },
-  } = useForm<ProductFormData>({
-    resolver: zodResolver(productSchema),
-  });
+ const {
+  register,
+  handleSubmit,
+  reset,
+  formState: { errors },
+} = useForm<
+  z.input<typeof productSchema>,
+  any,
+  ProductFormData
+>({
+  resolver: zodResolver(productSchema),
+});
 
   useEffect(() => {
 
     const fetchProducts = async () => {
 
       try {
-        const response = await fetch("http://localhost:5000/api/products");
+        const response = await fetch("https://stylehub-backend-pq06.onrender.com/api/products");
 
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -84,7 +88,7 @@ const AdminProducts = () => {
     if (editingProduct) {
       try {
         const response = await fetch(
-          `http://localhost:5000/api/products/${editingProduct._id}`,
+          `https://stylehub-backend-pq06.onrender.com/api/products/${editingProduct._id}`,
           {
             method: "PATCH",
             headers: {
@@ -141,7 +145,7 @@ const AdminProducts = () => {
       try {
 
         const response = await fetch(
-          "http://localhost:5000/api/products",
+          "https://stylehub-backend-pq06.onrender.com/api/products",
           {
 
             method: "POST",
@@ -444,7 +448,7 @@ const AdminProducts = () => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/products/${product._id}`,
+      `https://stylehub-backend-pq06.onrender.com/api/products/${product._id}`,
       {
         method: "DELETE",
         headers: {

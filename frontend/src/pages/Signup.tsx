@@ -43,7 +43,7 @@ const Signup = () => {
         try {
 
             const response = await fetch(
-                "http://localhost:5000/api/users/signup",
+                "https://stylehub-backend-pq06.onrender.com/api/users/signup",
                 {
                     method: "POST",
                     headers: {
@@ -78,6 +78,10 @@ const Signup = () => {
             <div className="auth-form-container" >
                 <h1>Sign Up</h1>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                      {signupError && (
+    <p className="signup-error">{signupError}</p>
+  )}
+
 
                     <div className="form-group" >
 

@@ -42,7 +42,7 @@ const [error, setError] = useState("");
   const fetchProduct = async () => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/products/${id}`
+        `https://stylehub-backend-pq06.onrender.com/api/products/${id}`
       );
 
       if (!response.ok) {

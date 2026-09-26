@@ -47,7 +47,7 @@ const Cart = () => {
         }));
 
         const response = await fetch(
-            "http://localhost:5000/api/orders/createorder",
+            "https://stylehub-backend-pq06.onrender.com/api/orders/createorder",
             {
                 method: "POST",
                 headers: {

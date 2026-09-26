@@ -23,7 +23,7 @@ const AdminUsers = () => {
 
             try {
                 const response = await fetch(
-                    "http://localhost:5000/api/users",
+                    "https://stylehub-backend-pq06.onrender.com/api/users",
 
                     {
                         headers: {
@@ -71,7 +71,7 @@ const handleDeleteUser = async (userId: string) => {
 
   try {
     const response = await fetch(
-      `http://localhost:5000/api/users/${userId}`,
+      `https://stylehub-backend-pq06.onrender.com/api/users/${userId}`,
       {
         method: "DELETE",
         headers: {
