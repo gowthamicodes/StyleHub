@@ -18,9 +18,9 @@ app.use(express.json());
 // const dns = require('node:dns').promises;
 // dns.setServers(["1.1.1.1", "8.8.8.8"]);
 
-const dns = require("node:dns").promises;
+// const dns = require("node:dns").promises;
 
-dns.setServers(["10.237.157.39"]);
+// dns.setServers(["10.237.157.39"]);
 
 
 app.get("/", (_req, res) => {
