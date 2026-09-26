@@ -17,15 +17,15 @@ useEffect(() => {
     try {
       const [productsResponse, usersResponse, ordersResponse] =
         await Promise.all([
-          fetch("https://stylehub-backend-pq06.onrender.com/api/products"),
+          fetch("https://stylehub-backend-pqo6.onrender.com/api/products"),
 
-          fetch("https://stylehub-backend-pq06.onrender.com/api/users", {
+          fetch("https://stylehub-backend-pqo6.onrender.com/api/users", {
             headers: {
               Authorization: `Bearer ${token}`,
             },
           }),
 
-          fetch("https://stylehub-backend-pq06.onrender.com/api/orders", {
+          fetch("https://stylehub-backend-pqo6.onrender.com/api/orders", {
             headers: {
               Authorization: `Bearer ${token}`,
             },

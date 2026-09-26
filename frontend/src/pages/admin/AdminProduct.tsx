@@ -51,7 +51,7 @@ const AdminProducts = () => {
     const fetchProducts = async () => {
 
       try {
-        const response = await fetch("https://stylehub-backend-pq06.onrender.com/api/products");
+        const response = await fetch("https://stylehub-backend-pqo6.onrender.com/api/products");
 
         if (!response.ok) {
           throw new Error("Failed to fetch products");
@@ -88,7 +88,7 @@ const AdminProducts = () => {
     if (editingProduct) {
       try {
         const response = await fetch(
-          `https://stylehub-backend-pq06.onrender.com/api/products/${editingProduct._id}`,
+          `https://stylehub-backend-pqo6.onrender.com/api/products/${editingProduct._id}`,
           {
             method: "PATCH",
             headers: {
@@ -145,7 +145,7 @@ const AdminProducts = () => {
       try {
 
         const response = await fetch(
-          "https://stylehub-backend-pq06.onrender.com/api/products",
+          "https://stylehub-backend-pqo6.onrender.com/api/products",
           {
 
             method: "POST",
@@ -448,7 +448,7 @@ const AdminProducts = () => {
 
   try {
     const response = await fetch(
-      `https://stylehub-backend-pq06.onrender.com/api/products/${product._id}`,
+      `https://stylehub-backend-pqo6.onrender.com/api/products/${product._id}`,
       {
         method: "DELETE",
         headers: {

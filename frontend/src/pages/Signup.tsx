@@ -43,7 +43,7 @@ const Signup = () => {
         try {
 
             const response = await fetch(
-                "https://stylehub-backend-pq06.onrender.com/api/users/signup",
+                "https://stylehub-backend-pqo6.onrender.com/api/users/signup",
                 {
                     method: "POST",
                     headers: {

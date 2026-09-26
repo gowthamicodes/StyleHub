@@ -31,7 +31,7 @@ const MyOrders = () => {
 
       try {
         const response = await fetch(
-          "https://stylehub-backend-pq06.onrender.com/api/orders/my-orders",
+          "https://stylehub-backend-pqo6.onrender.com/api/orders/my-orders",
           {
             headers: {
               Authorization: `Bearer ${token}`,

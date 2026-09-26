@@ -47,7 +47,7 @@ useEffect(() => {
 
     try {
       const response = await fetch(
-        `https://stylehub-backend-pq06.onrender.com/api/orders/${id}`,
+        `https://stylehub-backend-pqo6.onrender.com/api/orders/${id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

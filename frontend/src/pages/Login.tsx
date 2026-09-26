@@ -7,15 +7,11 @@ import { AuthContext } from "../Context/auth-context";
 // import type { Product } from "../types/Product";
 
 const loginSchema = z.object({
-  email: z
-    .string()
-    .email("Please enter a valid email"),
-
+  email: z.email("Please enter a valid email"),
   password: z
     .string()
     .min(6, "Password must be at least 6 characters"),
 });
-
 type LoginFormData = z.infer<typeof loginSchema>;
 
 const Login = () => {
@@ -47,7 +43,7 @@ const Login = () => {
       setLoginError("");
 
       const response = await fetch(
-        "https://stylehub-backend-pq06.onrender.com/api/users/login",
+        "https://stylehub-backend-pqo6.onrender.com/api/users/login",
 
         {
           method: "POST",

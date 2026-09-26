@@ -60,7 +60,7 @@ useEffect(() => {
     const fetchOrders = async () => {
       try {
         const response = await fetch(
-          "https://stylehub-backend-pq06.onrender.com/api/orders",
+          "https://stylehub-backend-pqo6.onrender.com/api/orders",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -110,7 +110,7 @@ const handleStatusChange = async (
     setUpdatingOrderId(orderId);
 
     const response = await fetch(
-      `https://stylehub-backend-pq06.onrender.com/api/orders/${orderId}`,
+      `https://stylehub-backend-pqo6.onrender.com/api/orders/${orderId}`,
       {
         method: "PATCH",
         headers: {
